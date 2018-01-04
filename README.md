@@ -26,18 +26,18 @@
 |10871|X보다 작은 수|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/SmallerThanX_%2310871.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/10871)| ~개선필요~ (완료) |
 |1546|평균|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/Average_%231546.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/1546)|
 |4344|평균은 넘겠지|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/SurelyMyScoreWillBeOverTheAverage_%234344.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/4344)|
-|1110|더하기 사이클|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/CycleOfSum_%231110.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/1110)| 아예 못 품 |
+|1110|더하기 사이클|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/CycleOfSum_%231110.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/1110)| ~아예-못-품~ (완료) |
 |4673|셀프 넘버|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/SelfNumber_%234673.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/4673)| ~개선필요~ (완료) |
 |1152|단어의 개수|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/HowManyWords_%231152.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/1152)|
 |2577|숫자의 개수|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/HowManyNumbers_%232577.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/2577)| ~개선필요~ (완료) |
-|8958|OX퀴즈|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/OXQuiz_%238958.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/8958)| 아예 못 품 |
+|8958|OX퀴즈|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/OXQuiz_%238958.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/8958)| ~아예-못-품~ (완료) |
 |2920|음계|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/Melody_%232920.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/2920)|
 |10039|평균 점수|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/AverageScore_%2310039.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/10039)|
 |2908|상수|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/SangSoo_%232908.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/2908)| ~개선필요~ (완료) |
 |2941|크로아티아 알파벳|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/CroatiaAlpabet_%232941.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/2941)| 아예 못 품 |
 |1978|소수찾기|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/FindPrimeNumber_%231978.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/1978)|
 |1929|소수구하기|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/GetPrimeNumber_%231929.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/1929)| 개선필요 |
-|9020|골드바흐의 추측|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/PartitionOfGoldBach_%239020.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/9020)|
+|9020|골드바흐의 추측|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/PartitionOfGoldBach_%239020.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/9020)| 개선필요
 |2750|수정렬하기|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/OrderNumbers_%232750.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/2750)|
 
 
