@@ -27,7 +27,15 @@ func printSmallerThan(input:Int, comparebleArray:[Int]) {
     print(resultArray)
 }
 
-printSmallerThan(input: 5, comparebleArray: [1,10,4,9,2,3,8,5,7,6])
+//printSmallerThan(input: 5, comparebleArray: [1,10,4,9,2,3,8,5,7,6])
 
-//TODO: 두호님 Tip. filter를 이용하는 방법
 
+//두호님 Tip. filter를 이용하는 방법
+func printSmallerNumbersThan(input:Int, comparebleArray:[Int]) {
+    let smallNumbers = comparebleArray.filter { (number) -> Bool in
+        return number < input
+    }
+    print(smallNumbers)
+}
+
+printSmallerNumbersThan(input: 5, comparebleArray: [1,10,4,9,2,3,8,5,7,6])

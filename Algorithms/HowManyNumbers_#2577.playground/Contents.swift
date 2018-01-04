@@ -42,7 +42,6 @@ A × B × C = 150 × 266 × 427 = 17037300 이 되고,
 func howManyNumbersWillBeUsed(a:Int, b:Int, c:Int) {
     var productNumber:Int = a * b * c
     var numbers:[Int] = []
-    //    var tempNumbers:[Int] = []
     
     while productNumber > 0 {
         numbers.append(productNumber%10)
@@ -50,14 +49,31 @@ func howManyNumbersWillBeUsed(a:Int, b:Int, c:Int) {
     }
     
     for index in 0...9 {
-        var tempNumbers = numbers.filter({ (number) -> Bool in
+        let tempNumbers = numbers.filter({ (number) -> Bool in
             return number == index
         })
         print(tempNumbers.count)
     }
 }
 
-howManyNumbersWillBeUsed(a: 150, b: 266, c: 427)
+//howManyNumbersWillBeUsed(a: 150, b: 266, c: 427)
 
-//TODO:- 두호님 Tip. 셀프넘버를 두호님이 제시한 방식과 비슷하게, 해당문제를 다시 풀어볼 것
+
+// 두호님 Tip. 셀프넘버를 두호님이 제시한 방식과 비슷하게, 해당문제를 다시 풀어볼 것
+func howManyNumbersForEachIndex(a:Int, b:Int, c:Int) {
+    var productNumber:Int = a * b * c
+    var numbers:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   
+    while productNumber > 0 {
+        numbers[productNumber%10] += 1
+        productNumber /= 10
+    }
+    
+    numbers.forEach { (number) in
+        print(number)
+    }
+}
+
+howManyNumbersForEachIndex(a: 150, b: 266, c: 427)
+
 

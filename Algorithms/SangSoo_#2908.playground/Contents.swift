@@ -18,7 +18,7 @@ import UIKit
  ### output
  437
  */
-
+//예전 코드
 func answerOfSangsoo(a:Int, b:Int) {
     var firstInput:Int = a
     var secondInput:Int = b
@@ -53,6 +53,19 @@ func answerOfSangsoo(a:Int, b:Int) {
     print(max(newFirstNumber, newSecondNumber))
 }
 
-answerOfSangsoo(a: 734, b: 893)
+//answerOfSangsoo(a: 734, b: 893)
 
-//TODO:- 두호님 Tip. 뒤집는 함수 하나 만들어서 함수 기능 분리
+
+//두호님 Tip. 뒤집는 함수 하나 만들어서 함수 기능 분리
+func reverseNumber(_ input:Int) -> Int {
+    return input/100 + input%10*100 + input%100 - input%10
+}
+
+func printSangSooAnser(a:Int, b:Int) {
+    print(max(reverseNumber(a), reverseNumber(b)))
+}
+
+printSangSooAnser(a: 734, b: 893)
+
+
+

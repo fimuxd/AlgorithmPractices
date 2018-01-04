@@ -16,15 +16,16 @@ import UIKit
  */
 
 func tellMeMyGrade(_ score:Int) {
-    guard score < 101 && score > 0 else {print("점수는 0 ~ 100점 입니다. "); return}
-    //두호님 Tip: 또는 range를 둘 수도 있다. (1...100).contains(score)
-    
     // 보영: 기존 코드
     //    if score > 100 {
     //        print("점수는 100점을 넘을 수 없습니다.")
     //        return
     //    }
     //
+    
+    //두호님 Tip: 기본 range 조건은 gurad 문을 쓸 수 있다. 추가적으로 범위연산자 외에 range를 둘 수도 있다. 예) (1...100).contains(score)
+//    guard score < 101 && score > 0 else {print("점수는 0 ~ 100점 입니다. "); return}
+    guard (1...100).contains(score) else {print("점수는 0 ~ 100점 입니다. "); return}
     
     if score > 89 {
         print("A")

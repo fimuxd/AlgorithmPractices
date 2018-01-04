@@ -84,7 +84,7 @@ func getSelfNumberBelow10000() {
             mutableNumber = mutableNumber/10
         }
 
-        var summaryInput:Int = number + numbers[0] + numbers[1]
+        let summaryInput:Int = number + numbers[0] + numbers[1]
         kaprekarNumbers.append(summaryInput)
         numbers = [0]
     }
@@ -99,22 +99,44 @@ func getSelfNumberBelow10000() {
 
     print(selfNumbers)
 }
-getSelfNumberBelow10000()
 
-//두호님 Tip
-//두개의 함수를 작성한다. 각 자릿수의 합을 구하는 함수.
-//array.forEach(각 인덱스를)
+//getSelfNumberBelow10000()
 
-//FIXME:- Tip을 이용해 다시 풀어볼 것
-func howManyNumbersWillBeUsed(a:Int, b:Int, c:Int) {
-    var productedNumber:Int = a * b * c
-    var numbers:[Int] = []
+/*
+ 두호님 Tip
+ 두개의 함수를 작성한다. 각 자릿수의 합을 구하는 함수.
+ array.forEach(각 인덱스를)
+*/
+
+//숫자 자신과 숫자의 각 자리수를 더하는 함수
+func getSumOfNumber(input:Int) -> Int {
+    var number = input
+    var sum = number
     
-    //    while productNumber > 0 {
-    //        numbers.append(productNumber%10)
-    //        productNumber = productNumber/10
-    //    }
-    //
+    while number > 0 {
+        sum += number%10
+        number /= 10
+    }
+    return sum
+}
+
+//상기 함수를 통해서 셀프넘버를 구합니다.
+func printSelfNumber() {
+    var kaprekarNumbers:[Int] = []
+ 
+    for number in 1...10000 {
+        kaprekarNumbers.append(getSumOfNumber(input: number))
+    }
+    
+    let selfNumber:[Int] = (1...10000).filter { (number) -> Bool in
+        return !kaprekarNumbers.contains(number)
+    }
+    
+    selfNumber.forEach { (number) in
+        print(number)
+    }
     
 }
+
+printSelfNumber()
 

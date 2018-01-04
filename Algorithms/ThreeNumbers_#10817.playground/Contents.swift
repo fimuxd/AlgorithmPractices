@@ -22,17 +22,31 @@ func tellMeSecondLargestInt(a:Int, b:Int, c:Int) {
     }
     
     print([a,b,c].sorted()[1])
-    
-    
-    //    if min(a,b) > min(a,c) {
-    //        print(a)
-    //    }else if min(b,c) > min(a,b) {
-    //        print(b)
-    //    }
-    //
 }
 
-tellMeSecondLargestInt(a: 30, b: 30, c: 10)
+//tellMeSecondLargestInt(a: 30, b: 30, c: 10)
 
-//TODO: 두호님 Tip. a랑 b를 먼저 비교하고, 그 결과를 c와 비교하는 방식으로 풀어볼것
 
+
+//두호님 Tip. a랑 b를 먼저 비교하고, 그 결과를 c와 비교하는 방식으로 풀어볼 것.
+func whichNumberIsSecondLargest(_ a:Int, b:Int, c:Int) {
+    if a > 100 || b > 100 || c > 100 { print("1부터 100까지의 수를 입력하세요.") }
+    
+    if a >= b {
+        if a < c {
+            print(a)
+        } else if b < c {
+            print(c)
+        } else {
+            print(b)
+        }
+    } else {
+        if c > b {
+            print(b)
+        }else{
+            print(c)
+        }
+    }
+}
+
+whichNumberIsSecondLargest(10, b: 20, c: 30)
