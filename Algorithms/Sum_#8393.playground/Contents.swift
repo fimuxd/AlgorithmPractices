@@ -23,7 +23,16 @@ func totalSumFromOne(to input:Int) {
     print(resultNumber)
 }
 
-totalSumFromOne(to: 3)
+//totalSumFromOne(to: 3)
 
-//TODO: .reduce를 사용해서 풀어보자
+
+//.reduce를 사용해서 풀어보자
+func totalSumByReduce(fromOneTo input:Int) {
+    let result:Int = (1...input).reduce(0, +)
+    print(result)
+}
+
+totalSumByReduce(fromOneTo: 3)
+
+
 

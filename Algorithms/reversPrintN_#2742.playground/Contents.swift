@@ -22,7 +22,15 @@ func nTnirp(_ inputNumber:Int) {
     }
 }
 
-nTnirp(5)
+//nTnirp(5)
 
-//TODO:- 두호님 Tip. variable 따로 선언 말고 input - number 방식으로 변경
+//두호님 Tip. variable 따로 선언 말고 input - number 방식으로 변경
+//아래와 같이 개선함
+func reversePrintN(_ input:Int) {
+    for number in (1...input).reversed() {
+        print(number)
+    }
+}
+
+reversePrintN(5)
 
