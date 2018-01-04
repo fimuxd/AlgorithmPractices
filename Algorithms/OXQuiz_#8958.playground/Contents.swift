@@ -28,4 +28,22 @@ func getScoreOfOXQuiz(_ input:String) {
 
 //getScoreOfOXQuiz("OXOXOXOOO")
 
-//TODO:- 두호님 Tip. 재귀, 함수 나누기, Boolean 등을 이용해서 다시 시도해볼 것!
+
+//두호님 Tip. 재귀, 함수 나누기, Boolean 등을 이용해서 다시 시도해볼 것!
+func scoreOfOXQuiz(_ input:String) {
+    var characters:[Character] = Array(input)
+    var score:Int = 0
+    var tempScore:Int = 0
+    
+    for i in 0..<characters.count {
+        if characters[i] == "O" {
+            tempScore += 1
+        }else{
+            tempScore = 0
+        }
+        score += tempScore
+    }
+    print(score)
+}
+
+scoreOfOXQuiz("OOOOOOOOOO")

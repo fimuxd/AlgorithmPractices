@@ -23,41 +23,58 @@ import UIKit
  */
 
 //FIXME:- 못 풀었습니다.
-func plusCycle(of inputNumber:Int) {
-    var input:Int = inputNumber
-    var numbers:[Int] = []
-    
-    if inputNumber > 99 {
-        print("0부터 99사이의 값을 입력하세요.")
-        return
-    }else if numbers.count == 0 {
-        numbers.append(inputNumber)
-    }else if inputNumber == numbers[0] && numbers.count != 1 {
-        print(numbers.count)
-        return
-    }
-    
-    while input > 0 {
-        numbers.insert(inputNumber/10, at: 1)
-        numbers.insert(inputNumber%10, at: 2)
-        input = input/10
-    }
-    
-    var summaryInput:Int = numbers[1] + numbers[2]
-    
-    while summaryInput > 0 {
-        numbers.insert(summaryInput/10, at: 3)
-        numbers.insert(summaryInput%10, at: 4)
-        summaryInput = summaryInput/10
-    }
-    
-    var newNumber:Int = (numbers[2] * 10) + (numbers[4])
-    plusCycle(of: newNumber)
-    print(newNumber)
-    
-}
+//func plusCycle(of inputNumber:Int) {
+//    var input:Int = inputNumber
+//    var numbers:[Int] = []
+//
+//    if inputNumber > 99 {
+//        print("0부터 99사이의 값을 입력하세요.")
+//        return
+//    }else if numbers.count == 0 {
+//        numbers.append(inputNumber)
+//    }else if inputNumber == numbers[0] && numbers.count != 1 {
+//        print(numbers.count)
+//        return
+//    }
+//
+//    while input > 0 {
+//        numbers.insert(inputNumber/10, at: 1)
+//        numbers.insert(inputNumber%10, at: 2)
+//        input = input/10
+//    }
+//
+//    var summaryInput:Int = numbers[1] + numbers[2]
+//
+//    while summaryInput > 0 {
+//        numbers.insert(summaryInput/10, at: 3)
+//        numbers.insert(summaryInput%10, at: 4)
+//        summaryInput = summaryInput/10
+//    }
+//
+//    var newNumber:Int = (numbers[2] * 10) + (numbers[4])
+//    plusCycle(of: newNumber)
+//    print(newNumber)
+//
+//}
 
 //plusCycle(of: 26)
-/* TODO:- 두호님 Tip. 함수두개와 재귀적으로 풀어보기
-        함수 여러개 > boolean > !() 인것을   전환
- */
+
+
+
+//두호님 Tip. 함수두개와 재귀적으로 풀어보기
+func nextNumber(input:Int) -> Int {
+    let sum:Int = (input/10) + (input%10)
+    return (input%10)*10 + sum%10
+}
+
+//nextNumber(input: 26)
+
+func lengthOfCycle(input:Int, origin:Int) -> Int {
+    if nextNumber(input: input) == origin {
+        return 1
+    } else {
+        return lengthOfCycle(input: nextNumber(input: input), origin: origin) + 1
+    }
+}
+
+lengthOfCycle(input: 26, origin: 26)
