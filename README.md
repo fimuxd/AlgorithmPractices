@@ -39,6 +39,12 @@
 |1929|소수구하기|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/GetPrimeNumber_%231929.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/1929)| 개선필요 |
 |9020|골드바흐의 추측|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/PartitionOfGoldBach_%239020.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/9020)| 개선필요
 |2750|수정렬하기|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/OrderNumbers_%232750.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/2750)|
+|10828|스택|playground|[출처](https://www.acmicpc.net/problem/10828)||
+|1874|스택 수열|playground|[출처](https://www.acmicpc.net/problem/1874)||
+|9012|괄호|playground|[출처](https://www.acmicpc.net/problem/9012)||
+|10845|큐|playground|[출처](https://www.acmicpc.net/problem/10845)||
+|11866|조세퍼스 문제 0|playground|[출처](https://www.acmicpc.net/problem/11866)||
+|2747|피보나치 수|playground|[출처](https://www.acmicpc.net/problem/2747)||
 
 
 ## Contributor
