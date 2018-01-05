@@ -68,6 +68,13 @@ func partitionOfGoldBach(_ number:Int) {
     print(resultArray[0].key)
 }
 
-partitionOfGoldBach(16)
+//partitionOfGoldBach(16)
+
 
 //TODO:- 두호님 Tip. 이 것 역시 앞의 소수문제들을 응용해서 간단히해보세요.
+func deductDivisors(in numbers:[Int]) -> [Int] {
+    if numbers.isEmpty { return [] }
+    let firstNumber = numbers[0]
+    let indexes = numbers[1..<numbers.count]
+    return [firstNumber] + deductDivisors(in: indexes.filter{ $0 % firstNumber > 0 })
+}
