@@ -40,10 +40,10 @@
 |9020|골드바흐의 추측|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/PartitionOfGoldBach_%239020.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/9020)| 개선필요
 |2750|수정렬하기|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/OrderNumbers_%232750.playground/Contents.swift) |[출처](https://www.acmicpc.net/problem/2750)|
 |10828|스택|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/Stack_%2310828.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/10828)||
-|1874|스택 수열|playground|[출처](https://www.acmicpc.net/problem/1874)||
+|1874|스택 수열|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/StackProgression_%231874.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/1874)||
 |9012|괄호|playground|[출처](https://www.acmicpc.net/problem/9012)||
 |10845|큐|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/Queue_%2310845.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/10845)||
-|11866|조세퍼스 문제 0|playground|[출처](https://www.acmicpc.net/problem/11866)||
+|11866|조세퍼스 문제 0|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/Josephus0_%2311866.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/11866)||
 |2747|피보나치 수|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/FibonacciNumber_%232747.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/2747)||
 
 
