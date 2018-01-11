@@ -35,47 +35,36 @@ import UIKit
  YES
  NO
  */
+// ( = 1 ) = -1 이라고 하고, 0 이라고 풀어보자
 
-func removeParentheses(input:String) -> [String] {
+func isBracket(_ input:String) -> String {
+    guard !input.isEmpty || input.count%2 == 0 else { return "NO" } // 홀수거나 스트링이 비어있으면 당연히 괄호가 아닐 것이므로 No
+    guard Array(input).first! == "(" || Array(input).last! == ")" else { return "NO" }// 시작부터 닫히는 괄호 또는, 마지막에 열리는 괄호는 온전하지 않으므로 No
     
+    var currentSum:Int = 0
+    
+    for i in 0..<input.count {
+        if Array(input)[i] == "(" {
+            currentSum += 1
+        } else {
+            currentSum -= 1
+        }
+        
+        if currentSum < 0 {
+            return "NO"
+        }
+    }
+    
+    if currentSum == 0 {
+        return "YES"
+    } else {
+        return "NO"
+    }
 }
 
-
-//func isParentheses(input:String) -> Bool {
-//    guard input.count%2 == 0 else {return false}
-//
-//    let realParenthese:String = "()"
-//    var inputCharacter = Array(input).map { (character) -> String in
-//        String(character)
-//    }
-//
-//
-//    for i in 1..<inputCharacter.count-1 {
-//        print(i)
-//        print("돌기젼: \(inputCharacter)")
-//        if inputCharacter[i] + inputCharacter[i+1] == realParenthese{
-//            inputCharacter.removeSubrange(Range<Int>.init(uncheckedBounds: (lower: i, upper: i+2)))
-//            print("지운후: \(inputCharacter)")
-//        }
-//    }
-//
-//    if inputCharacter.count == 0 {
-//        return true
-//    }
-//    return false
-//}
-
-//isParentheses(input: "(())())")
-//isParentheses(input: "(((()())()")
-isParentheses(input: "(()())((()))")
-//isParentheses(input: "((()()(()))(((())))()")
-//isParentheses(input: "()()()()(()()())()")
-//isParentheses(input: "(()((())()(")
-
-//var array:[Int] = [7,6,5,4,3,2,1,0]
-//let test = array.removeSubrange(Range<Int>.init(uncheckedBounds: (lower: 0, upper: 2))
-
-//print(array)
-
-//index 8이랑 9를 지우려면?
-//예를들어 index 0이랑 1을 지우려면 >. 0, 2
+isBracket("(())())")
+isBracket("(((()())()")
+isBracket("(()())((()))")
+isBracket("((()()(()))(((())))()")
+isBracket("()()()()(()()())()")
+isBracket("(()((())()()")
