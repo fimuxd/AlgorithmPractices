@@ -24,7 +24,6 @@ func josephus(numberOfPeople:Int, kill:Int) -> [Int] {
     
     while killed.count != numberOfPeople {
         var range = alive.split(separator: alive[kill-1], maxSplits: 1, omittingEmptySubsequences: false)
-        print(alive)
         killed.append(alive[kill-1])
         
         if alive.count > kill {
@@ -41,12 +40,5 @@ josephus(numberOfPeople: 7, kill: 3)
 
 
 
-
-
-
-
-
-
-
-
+//두호님 Tip. 전통적인 방법은 인덱스를 어레이카운트로 나눈 나머지를 이용한 방법입니다. 하지만 위 방법이 코드 가독성 면이나 실무에 적용하기엔 훨씬 좋네요.
 
