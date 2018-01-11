@@ -42,9 +42,9 @@
 |10828|스택|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/Stack_%2310828.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/10828)||
 |1874|스택 수열|playground|[출처](https://www.acmicpc.net/problem/1874)||
 |9012|괄호|playground|[출처](https://www.acmicpc.net/problem/9012)||
-|10845|큐|playground|[출처](https://www.acmicpc.net/problem/10845)||
+|10845|큐|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/Queue_%2310845.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/10845)||
 |11866|조세퍼스 문제 0|playground|[출처](https://www.acmicpc.net/problem/11866)||
-|2747|피보나치 수|playground|[출처](https://www.acmicpc.net/problem/2747)||
+|2747|피보나치 수|[playground](https://github.com/fimuxd/AlgorithmPractices/blob/master/Algorithms/FibonacciNumber_%232747.playground/Contents.swift)|[출처](https://www.acmicpc.net/problem/2747)||
 
 
 ## Contributor
