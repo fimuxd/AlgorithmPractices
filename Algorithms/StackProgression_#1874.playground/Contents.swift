@@ -62,9 +62,6 @@ import UIKit
  
  \-
  */
-func makeStack(_ count:Int) -> [Int] {
-    return Array(1...count)
-}
 
 func showMeTheProcessToMake(theArray:[Int]) {
     var standardArray:[Int] = theArray
@@ -73,16 +70,20 @@ func showMeTheProcessToMake(theArray:[Int]) {
     var number:Int = 1
     
     while !standardArray.isEmpty {
-        print("""
-            standardArray: \(standardArray)
-            stack: \(stack)
-            resultArray: \(resultArray)
-            number: \(number)
-            """)
-        if stack.last != standardArray.first {
+//        print("""
+//            standardArray: \(standardArray)
+//            stack: \(stack)
+//            resultArray: \(resultArray)
+//            number: \(number)
+//            """)
+        
+        if stack.last != standardArray.first && standardArray.first! >= number {
             stack.append(number)
             print("+")
             number += 1
+        } else if stack.last != standardArray.first && standardArray.first! < number {
+            print("스택수열을 만들 수 없습니다.")
+            break
         } else {
             resultArray.append(standardArray.first!)
             stack.removeLast()
@@ -91,14 +92,13 @@ func showMeTheProcessToMake(theArray:[Int]) {
         }
     }
     
-    print(resultArray)
     if theArray == resultArray {
         print("스택수열을 만들 수 있습니다.")
-    } else {
-        print("스택수열을 만들 수 없습니다.")
     }
 }
 
 let request:[Int] = [4,3,6,8,7,5,2,1]
+let request1:[Int] = [3,4,8,6,5,7,1,2]
 showMeTheProcessToMake(theArray: request)
+showMeTheProcessToMake(theArray: request1)
 
