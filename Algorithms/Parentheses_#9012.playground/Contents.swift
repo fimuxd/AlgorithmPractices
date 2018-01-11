@@ -36,43 +36,46 @@ import UIKit
  NO
  */
 
-func isParentheses(input:String) -> Bool {
-    guard input.count%2 == 0 else {return false}
-
-    let realParenthese:String = "()"
-    var inputCharacter = Array(input).map { (character) -> String in
-        String(character)
-    }
-
-    while inputCharacter.count > 1 {
-        print("와일문")
-        for i in 0..<inputCharacter.count - 1 {
-            if inputCharacter[i] + inputCharacter[i+1] == realParenthese{
-                if i+2 <= inputCharacter.endIndex {
-                    inputCharacter.removeSubrange(Range<Int>.init(uncheckedBounds: (lower: i, upper: i+2)))
-                    print(inputCharacter)
-                }
-            }
-        }
-    }
-
-    if inputCharacter.count == 0 {
-        return true
-    }
-    return false
+func removeParentheses(input:String) -> [String] {
+    
 }
 
-isParentheses(input: "(())())")
+
+//func isParentheses(input:String) -> Bool {
+//    guard input.count%2 == 0 else {return false}
+//
+//    let realParenthese:String = "()"
+//    var inputCharacter = Array(input).map { (character) -> String in
+//        String(character)
+//    }
+//
+//
+//    for i in 1..<inputCharacter.count-1 {
+//        print(i)
+//        print("돌기젼: \(inputCharacter)")
+//        if inputCharacter[i] + inputCharacter[i+1] == realParenthese{
+//            inputCharacter.removeSubrange(Range<Int>.init(uncheckedBounds: (lower: i, upper: i+2)))
+//            print("지운후: \(inputCharacter)")
+//        }
+//    }
+//
+//    if inputCharacter.count == 0 {
+//        return true
+//    }
+//    return false
+//}
+
+//isParentheses(input: "(())())")
 //isParentheses(input: "(((()())()")
-//isParentheses(input: "(()())((()))")
+isParentheses(input: "(()())((()))")
 //isParentheses(input: "((()()(()))(((())))()")
 //isParentheses(input: "()()()()(()()())()")
 //isParentheses(input: "(()((())()(")
 
-//var array:[Int] = [0,1,2,3,4,5,6,7]
+//var array:[Int] = [7,6,5,4,3,2,1,0]
+//let test = array.removeSubrange(Range<Int>.init(uncheckedBounds: (lower: 0, upper: 2))
+
 //print(array)
-//array.removeSubrange(Range<Int>.init(uncheckedBounds: (lower: 6, upper: 8)))
-//print(array)
 
-
-
+//index 8이랑 9를 지우려면?
+//예를들어 index 0이랑 1을 지우려면 >. 0, 2
