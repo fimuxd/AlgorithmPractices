@@ -18,7 +18,35 @@ import UIKit
  [3, 6, 2, 7, 5, 1, 4]
  */
 
-func getJosephusArray(numberOfPeople:Int, killNumber:Int) -> [Int] {
-    return []
+func josephus(numberOfPeople:Int, kill:Int) -> [Int] {
+    var alive:[Int] = Array(1...numberOfPeople)
+    var killed:[Int] = []
+    
+    while killed.count != numberOfPeople {
+        var range = alive.split(separator: alive[kill-1], maxSplits: 1, omittingEmptySubsequences: false)
+        print(alive)
+        killed.append(alive[kill-1])
+        
+        if alive.count > kill {
+            alive = Array(range[1] + range[0])
+        } else {
+            alive = Array(range[0] + range[0])
+        }
+    }
+    
+    return killed
 }
+
+josephus(numberOfPeople: 7, kill: 3)
+
+
+
+
+
+
+
+
+
+
+
 
