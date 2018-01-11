@@ -2,6 +2,7 @@
 
 import UIKit
 
+
 /*:
  # 스택 수열 (#1874)
  ## 문제
@@ -29,51 +30,75 @@ import UIKit
  
  1
  ### output
-\+
+ \+
  
-\+
+ \+
  
-\+
+ \+
  
-\+
+ \+
  
-\-
+ \-
  
-\-
+ \-
  
-\+
-
-\+
+ \+
  
-\-
+ \+
  
-\+
+ \-
  
-\+
+ \+
  
-\-
+ \+
  
-\-
+ \-
  
-\-
+ \-
  
-\-
+ \-
  
-\-
+ \-
+ 
+ \-
  */
+func makeStack(_ count:Int) -> [Int] {
+    return Array(1...count)
+}
 
-func showMeTheProcessToMake(_ array:[Int]) {
-    var originArray:[Int] = Array(1..<array.count)
-    let inputArray:[Int] = array
-
-    while originArray != inputArray {
-        if originArray[0] != inputArray[0] {
-            originArray.append(inputArray[0])
-            originArray.removeFirst()
-            inputArray.removeFirst()
+func showMeTheProcessToMake(theArray:[Int]) {
+    var standardArray:[Int] = theArray
+    var stack:[Int] = []
+    var resultArray:[Int] = []
+    var number:Int = 1
+    
+    while !standardArray.isEmpty {
+        print("""
+            standardArray: \(standardArray)
+            stack: \(stack)
+            resultArray: \(resultArray)
+            number: \(number)
+            """)
+        if stack.last != standardArray.first {
+            stack.append(number)
             print("+")
+            number += 1
         } else {
-            
+            resultArray.append(standardArray.first!)
+            stack.removeLast()
+            standardArray.removeFirst()
+            print("-")
         }
     }
+    
+    print(resultArray)
+    if theArray == resultArray {
+        print("스택수열을 만들 수 있습니다.")
+    } else {
+        print("스택수열을 만들 수 없습니다.")
+    }
 }
+
+let request:[Int] = [4,3,6,8,7,5,2,1]
+showMeTheProcessToMake(theArray: request)
+
