@@ -88,20 +88,22 @@ struct Queue {
             return items.removeFirst()
         }
     }
+    // 두호님 Tip. 실무에서는 return 값을 옵셔널로 설정해서 하는 경우가 훨씬 많겠죠
     
-    mutating func size() -> Int{
+    func size() -> Int{
         return items.count
     }
     
-    mutating func empty() -> Int {
+    func empty() -> Int {
         if items.isEmpty {
             return 1
         } else {
             return 0
         }
     }
+    //mutating이 일어나지 않는경우에는 getter로 구현하는게 좋다.
     
-    mutating func front() -> Int {
+    func front() -> Int {
         if items.isEmpty {
             return -1
         } else {
@@ -109,7 +111,7 @@ struct Queue {
         }
     }
     
-    mutating func back() -> Int {
+    func back() -> Int {
         if items.isEmpty {
             return -1
         } else {
@@ -117,6 +119,8 @@ struct Queue {
         }
     }
 }
+
+// 두호님 Tip. struct에서 mutating 키워드에 대한 스터디
 
 var queue:Queue = Queue(items: [])
 
