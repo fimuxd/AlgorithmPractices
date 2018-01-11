@@ -32,4 +32,43 @@ func getFibonacciNumber(of n:Int) -> Int {
     }
 }
 
-getFibonacciNumber(of: 10)
+//getFibonacciNumber(of: 30)
+
+/* 두호님 Tip.
+ 상기와 같이 재귀로 하면 2^n 만큼의 시간이 걸린다. 30번쨰 피보나치를 구할 경우 10억번 이상 돌게 된다...
+ 이문제를 해결할 수 있는 방법을 memorization 이라고 합니다.
+ */
+var resultDic:[Int:Int] = [1:1, 2:1]
+
+func memorizationFibonacciNumber(of n:Int) -> Int {
+    guard n > 0 else {return 0}
+    
+    if let value = resultDic[n] {
+        return value
+    } else {
+        let value = memorizationFibonacciNumber(of: n-1) + memorizationFibonacciNumber(of: n-2)
+        resultDic[n] = value
+        return value
+    }
+}
+
+memorizationFibonacciNumber(of: 30)
+
+func fibonacciNumber(of n:Int) {
+    
+    guard n > 1 else {print("1"); return}
+    var fArray:[Int] = [0,1]
+    
+    for i in 2...n {
+        fArray.append(fArray[i-1] + fArray[i-2])
+    }
+    print(fArray.last!)
+}
+
+fibonacciNumber(of: 30)
+
+
+
+
+
+
